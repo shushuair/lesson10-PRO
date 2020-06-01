@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	
+	// task 1 Closure
+		
+			function calc() {
+
+				let accum = 0;
+			
+				return function(num) {
+					return accum += num;
+				}
+
+			
+			};
+
+			let result = calc();
+
+			console.log(result(6));
+			console.log(result(11));
+			console.log(result(22));
+			
+
+			
+			// task 2
+
+			function sum(step, initialValue) {				
+				let accum = initialValue;				
+				return function() {
+					return accum += step;					
+				};
+			};
+			
+			let result = sum(3,7);
+
+			console.log(result());
+			console.log(result());
+			console.log(result());
+			console.log(result());
+	
+	</script>
+</body>
+</html>
+
+
+
+	
+
